@@ -2,7 +2,7 @@
 const http = require('http');
 
 //import de app.js créé par Express
-const app = require('./app');
+const app = require("./app");
 
 //fonction qui renvoie un port de connection valide
 const normalizePort = val => {
@@ -58,27 +58,4 @@ server.listen(port);//port 3000
 
 
 
-var mysql = require('mysql');
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "p@ssw0rd1",
-  database : "groupomania"
-
-});
-
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("connecté à la base de donnée ");
-
- /* con.query("SELECT t_user.id as 'ID', t_user.nom as 'NOM', FROM t_user ", function (err, result) {
-
-    if (err) throw err;
-
-    console.log(result);
-
-  });*/
-
-
-});
